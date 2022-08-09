@@ -1,5 +1,5 @@
 
-export const tips = (server, db) => {
+ const tips = (server, db) => {
   server.get('/tips', (req, res) => {
     res.json({
       tips: db.tips[parseInt(Math.random() * db.tips.length)],
@@ -8,8 +8,10 @@ export const tips = (server, db) => {
 
   server.post('/create', (req, res) => {
     const body = req.body
-    db.dicas.push(body.tip)
+    db.tips.push(body.tips)
     res.json(body)
   });
 
 };
+
+export default tips;

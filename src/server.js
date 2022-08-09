@@ -1,6 +1,6 @@
 import  Express  from "express";
-import db from "./data/db";
-import { tips } from "./controllers/controller";
+import db from "./data/db.js";
+import  tips  from "./controllers/controller.js";
 
 
 const server = Express();
